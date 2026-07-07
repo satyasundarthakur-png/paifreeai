@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: PainAIPage,
-}));
+});
 
 const STORAGE_KEY = "painai_cases";
 const MAX_CASES = 50;
