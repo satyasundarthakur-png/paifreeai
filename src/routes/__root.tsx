@@ -77,14 +77,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Diabetes Prescription Assistant" },
+      {
+        name: "description",
+        content:
+          "Specialist-grade AI diabetes prescriptions for Type 1, Type 2, GDM, complications, technology and lifestyle management.",
+      },
+      { name: "author", content: "DiabAI" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:title", content: "Diabetes Prescription Assistant" },
+      { name: "twitter:title", content: "Diabetes Prescription Assistant" },
+      {
+        name: "description",
+        content:
+          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bbfb6a00-a3e0-4903-b24a-c630a13ea587/id-preview-76cea380--61865afc-1c24-4b2c-8003-3068add78d23.lovable.app-1783034693756.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bbfb6a00-a3e0-4903-b24a-c630a13ea587/id-preview-76cea380--61865afc-1c24-4b2c-8003-3068add78d23.lovable.app-1783034693756.png",
+      },
     ],
     links: [
       {

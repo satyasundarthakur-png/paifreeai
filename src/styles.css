@@ -142,3 +142,175 @@
     color: var(--color-foreground);
   }
 }
+
+/* ============ DiabAI custom classes ============ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --ink: #1A0505;
+  --ink-deep: #12100C;
+  --brass: #C0392B;
+  --brass-deep: #8A6B12;
+  --parchment: #FEE2E2;
+  --sand: #FECACA;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, .font-display {
+  font-family: var(--font-display);
+}
+
+.data-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF8 100%);
+  border-radius: 18px;
+  box-shadow: 0 1px 2px rgb(36 26 16 / 0.04), 0 20px 40px -18px rgb(36 26 16 / 0.18);
+  border: 1px solid var(--sand);
+  position: relative;
+}
+.field {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #D8C89C;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-family: var(--font-body);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #FFFEFA;
+  color: var(--ink);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--brass);
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.15);
+  background: #FFFFFF;
+}
+.label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #7B241C;
+  margin-bottom: 5px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #E74C3C 0%, #C0392B 55%, #96281B 100%);
+  color: #1E1508;
+  padding: 13px 26px;
+  border-radius: 11px;
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(201 162 39 / 0.35), 0 1px 0 rgba(255,255,255,0.4) inset;
+  letter-spacing: 0.1px;
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 20px -6px rgb(201 162 39 / 0.45), 0 1px 0 rgba(255,255,255,0.4) inset;
+  filter: brightness(1.04);
+}
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.btn-ghost {
+  background: transparent;
+  color: #7B241C;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: 1.5px solid #D8C89C;
+}
+.btn-ghost:hover {
+  background: var(--parchment);
+  color: var(--ink);
+  border-color: #C0392B;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--parchment);
+  letter-spacing: 0.2px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 36px;
+  height: 2px;
+  background: var(--brass);
+}
+.urgency-routine { color: #16A34A; font-weight: 800; }
+.urgency-urgent { color: #D97706; font-weight: 800; }
+.urgency-emergency { color: #DC2626; font-weight: 800; }
+.med-table th {
+  background: linear-gradient(135deg, #C0392B, #96281B);
+  color: white;
+  font-weight: 700;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.med-table td {
+  border-bottom: 1px solid var(--sand);
+  font-size: 14px;
+}
+.warning-item {
+  color: #DC2626;
+  font-weight: 600;
+}
+.history-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgb(36 26 16 / 0.12), 0 8px 10px -6px rgb(36 26 16 / 0.1);
+  border-color: var(--brass);
+}
+
+/* ---- Signature: glucose curve line-draw animation ---- */
+@keyframes draw-curve {
+  from { stroke-dashoffset: 620; }
+  to { stroke-dashoffset: 0; }
+}
+.glucose-curve path {
+  stroke-dasharray: 620;
+  stroke-dashoffset: 620;
+  animation: draw-curve 2.2s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .glucose-curve path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
