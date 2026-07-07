@@ -77,31 +77,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Diabetes Prescription Assistant" },
+      { title: "PainAI — AI Pain Medicine Prescription Assistant" },
       {
         name: "description",
         content:
-          "Specialist-grade AI diabetes prescriptions for Type 1, Type 2, GDM, complications, technology and lifestyle management.",
+          "Specialist-grade AI for nociceptive, neuropathic, cancer pain, musculoskeletal, headache, interventional and chronic pain management.",
       },
       { name: "author", content: "DiabAI" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Diabetes Prescription Assistant" },
-      { name: "twitter:title", content: "Diabetes Prescription Assistant" },
+      { property: "og:title", content: "PainAI — AI Pain Medicine Prescription Assistant" },
+      { name: "twitter:title", content: "PainAI — AI Pain Medicine Prescription Assistant" },
       {
         name: "description",
         content:
-          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+          "Specialist-grade AI for nociceptive, neuropathic, cancer pain, musculoskeletal, headache, interventional and chronic pain management.",
       },
       {
         property: "og:description",
         content:
-          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+          "Specialist-grade AI for nociceptive, neuropathic, cancer pain, musculoskeletal, headache, interventional and chronic pain management.",
       },
       {
         name: "twitter:description",
         content:
-          "Smart Treatment Deploy enables seamless deployment of diabetic treatment AI logic from uploaded zip files.",
+          "Specialist-grade AI for nociceptive, neuropathic, cancer pain, musculoskeletal, headache, interventional and chronic pain management.",
       },
       {
         property: "og:image",

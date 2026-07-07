@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "PainAI — AI Pain Medicine Prescription Assistant" },
       {
         property: "og:description",
-        content: "Evidence-based pain management plans in seconds.",
+        content: "Specialist-grade AI for nociceptive, neuropathic, cancer pain, musculoskeletal, headache, interventional and chronic pain management.",
       },
     ],
   }),
